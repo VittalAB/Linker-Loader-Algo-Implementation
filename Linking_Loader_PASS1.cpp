@@ -39,23 +39,8 @@ int main()
         objcode.close();
     }
 
-    estab::iterator itr;
-    cout << "ESTAB contents :- \n";
+    display_ESTAB();
 
-    cout << "control "
-         << "symbol "
-         << "addr "
-         << "len " << endl;
-    cout << "section "
-         << "name " << endl;
-    for (itr = ESTAB.begin(); itr != ESTAB.end(); itr++)
-    {
-        for (int i = 0; i < itr->second.size(); i++)
-        {
-            cout << itr->second[i] + " ";
-        }
-        cout << "\n";
-    }
     return 0;
 }
 

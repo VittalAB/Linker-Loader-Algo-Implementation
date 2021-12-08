@@ -127,3 +127,23 @@ void enter_control_section_name_into_ESTAB_with_value_CSADDR(string op)
 
     ESTAB[CSADDR] = field;
 }
+
+void display_ESTAB(){
+    estab::iterator itr;
+    cout << "ESTAB contents :- \n";
+
+    cout << "control "
+         << "symbol "
+         << "addr "
+         << "len " << endl;
+    cout << "section "
+         << "name " << endl;
+    for (itr = ESTAB.begin(); itr != ESTAB.end(); itr++)
+    {
+        for (int i = 0; i < itr->second.size(); i++)
+        {
+            cout << itr->second[i] + " ";
+        }
+        cout << "\n";
+    }
+}
